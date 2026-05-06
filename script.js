@@ -481,7 +481,7 @@ const questionIcons = {
 
 // 16型HDTI帝王匹配库
 const emperorMatch = {
-    'ENTJ': { name: '秦始皇 嬴政', title: '千古一帝・指挥官', image: './images/emperor_entj.png' },
+    'ENTJ': { name: '秦始皇 嬴政', title: '千古一帝・指挥官', image: './images/entj.png' },
     'INTJ': { name: '汉武帝 刘彻', title: '定鼎乾坤・战略家', image: './images/emperor_intj.png' },
     'ENFJ': { name: '唐太宗 李世民', title: '贞观天可汗・引路人', image: './images/emperor_enfj.png' },
     'INFJ': { name: '蜀昭烈帝 刘备', title: '仁义昭烈・理想者', image: './images/emperor_infj.png' },
