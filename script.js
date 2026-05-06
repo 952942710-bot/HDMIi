@@ -482,21 +482,21 @@ const questionIcons = {
 // 16型HDTI帝王匹配库
 const emperorMatch = {
     'ENTJ': { name: '秦始皇 嬴政', title: '千古一帝・指挥官', image: './images/entj.png' },
-    'INTJ': { name: '汉武帝 刘彻', title: '定鼎乾坤・战略家', image: './images/emperor_intj.png' },
-    'ENFJ': { name: '唐太宗 李世民', title: '贞观天可汗・引路人', image: './images/emperor_enfj.png' },
-    'INFJ': { name: '蜀昭烈帝 刘备', title: '仁义昭烈・理想者', image: './images/emperor_infj.png' },
-    'ESTJ': { name: '明太祖 朱元璋', title: '洪武定规・执行官', image: './images/emperor_estj.png' },
-    'ISTJ': { name: '清圣祖 玄烨', title: '康熙守业・检查官', image: './images/emperor_istj.png' },
-    'ESFJ': { name: '宋仁宗 赵祯', title: '仁宗仁治・执政官', image: './images/emperor_esfj.png' },
-    'ISFJ': { name: '汉光武帝 刘秀', title: '光武中兴・守护者', image: './images/emperor_isfj.png' },
-    'ESTP': { name: '汉高祖 刘邦', title: '草根开国・创业者', image: './images/emperor_estp.png' },
-    'ISTP': { name: '宋太祖 赵匡胤', title: '黄袍加身・巧匠', image: './images/emperor_istp.png' },
-    'ESFP': { name: '清高宗 弘历', title: '盛世风流・表演者', image: './images/emperor_esfp.png' },
-    'ISFP': { name: '宋徽宗 赵佶', title: '书画圣手・艺术家', image: './images/emperor_isfp.png' },
-    'ENTP': { name: '魏武帝 曹操', title: '乱世奸雄・智多星', image: './images/emperor_entp.png' },
-    'INTP': { name: '明世宗 嘉靖 朱厚熜', title: '深宫控权・逻辑学家', image: './images/emperor_intp.png' },
-    'ENFP': { name: '隋炀帝 杨广', title: '大运河筑梦・追梦人', image: './images/emperor_enfp.png' },
-    'INFP': { name: '明惠宗 建文帝 朱允炆', title: '建文仁心・纯粹者', image: './images/emperor_infp.png' }
+    'INTJ': { name: '汉武帝 刘彻', title: '定鼎乾坤・战略家', image: './images/intj.png' },
+    'ENFJ': { name: '唐太宗 李世民', title: '贞观天可汗・引路人', image: './images/enfj.png' },
+    'INFJ': { name: '蜀昭烈帝 刘备', title: '仁义昭烈・理想者', image: './images/infj.png' },
+    'ESTJ': { name: '明太祖 朱元璋', title: '洪武定规・执行官', image: './images/estj.png' },
+    'ISTJ': { name: '清圣祖 玄烨', title: '康熙守业・检查官', image: './images/istj.png' },
+    'ESFJ': { name: '宋仁宗 赵祯', title: '仁宗仁治・执政官', image: './images/esfj.png' },
+    'ISFJ': { name: '汉光武帝 刘秀', title: '光武中兴・守护者', image: './images/isfj.png' },
+    'ESTP': { name: '汉高祖 刘邦', title: '草根开国・创业者', image: './images/estp.png' },
+    'ISTP': { name: '宋太祖 赵匡胤', title: '黄袍加身・巧匠', image: './images/istp.png' },
+    'ESFP': { name: '清高宗 弘历', title: '盛世风流・表演者', image: './images/esfp.png' },
+    'ISFP': { name: '宋徽宗 赵佶', title: '书画圣手・艺术家', image: './images/isfp.png' },
+    'ENTP': { name: '魏武帝 曹操', title: '乱世奸雄・智多星', image: './images/entp.png' },
+    'INTP': { name: '明世宗 嘉靖 朱厚熜', title: '深宫控权・逻辑学家', image: './images/intp.png' },
+    'ENFP': { name: '隋炀帝 杨广', title: '大运河筑梦・追梦人', image: './images/enfp.png' },
+    'INFP': { name: '明惠宗 建文帝 朱允炆', title: '建文仁心・纯粹者', image: './images/infp.png' }
 };
 
 // 页面加载完成后初始化
