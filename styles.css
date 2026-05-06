@@ -1,0 +1,824 @@
+/* HDTI千古帝王人格测试 - 完整样式 */
+
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif SC', 'Songti SC', serif;
+    background-color: #F5F0E6;
+    color: #1A1A1A;
+    line-height: 1.6;
+}
+
+/* 导航栏 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(245, 240, 230, 0.95);
+    border-bottom: 1px solid #D4C4A8;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #9E2A2B;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-item {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.navbar-item:hover,
+.navbar-item.active {
+    background-color: #9E2A2B;
+    color: #F5F0E6;
+}
+
+.navbar-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-btn {
+    padding: 8px 20px;
+    border: 1px solid #9E2A2B;
+    background-color: transparent;
+    color: #9E2A2B;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.navbar-btn:hover {
+    background-color: #9E2A2B;
+    color: #F5F0E6;
+}
+
+.navbar-btn.primary {
+    background-color: #9E2A2B;
+    color: #F5F0E6;
+}
+
+.navbar-btn.primary:hover {
+    background-color: #7A1F20;
+}
+
+/* 页面内容 */
+.page {
+    display: none;
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+.page.active {
+    display: block;
+}
+
+/* 欢迎页 */
+.welcome-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.corner-decoration {
+    position: fixed;
+    opacity: 0.3;
+}
+
+.corner-decoration.top-left {
+    top: 100px;
+    left: 20px;
+}
+
+.corner-decoration.bottom-right {
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(180deg);
+}
+
+.dragon-decoration {
+    margin-bottom: 25px;
+}
+
+.welcome-content h1 {
+    font-size: 3.5rem;
+    color: #1A1A1A;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.welcome-content p {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 40px;
+    background-color: #9E2A2B;
+    color: #F5F0E6;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    margin: 0 auto;
+}
+
+.primary-btn:hover {
+    background-color: #7A1F20;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(158, 42, 43, 0.3);
+}
+
+.seal-icon {
+    display: flex;
+    align-items: center;
+}
+
+.loading-seal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: seal-stamp 1s ease-out;
+}
+
+@keyframes seal-stamp {
+    0% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+/* 答题页 */
+.question-header {
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.progress {
+    text-align: center;
+}
+
+#progress-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #E8E0D0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #9E2A2B;
+    transition: width 0.3s ease;
+}
+
+.question-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.question-decoration {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.question-content h2 {
+    font-size: 1.5rem;
+    color: #9E2A2B;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.question-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-btn {
+    padding: 15px 20px;
+    text-align: left;
+    background-color: #F5F0E6;
+    border: 1px solid #D4C4A8;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+    background-color: #E8E0D0;
+    border-color: #9E2A2B;
+}
+
+.option-btn.selected {
+    background-color: #9E2A2B;
+    color: #F5F0E6;
+    border-color: #9E2A2B;
+}
+
+.question-footer {
+    max-width: 800px;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.secondary-btn {
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 1px solid #9E2A2B;
+    color: #9E2A2B;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.secondary-btn:hover:not(:disabled) {
+    background-color: #9E2A2B;
+    color: #F5F0E6;
+}
+
+.secondary-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* 结果页 */
+.result-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.result-content h1 {
+    font-size: 2rem;
+    color: #1A1A1A;
+    margin-bottom: 30px;
+}
+
+.result-core {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.result-core h2 {
+    font-size: 2.5rem;
+    color: #9E2A2B;
+    margin-bottom: 10px;
+}
+
+.result-core h3 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.seal-stamp {
+    margin: 20px auto;
+    animation: seal-appear 0.5s ease-out;
+}
+
+@keyframes seal-appear {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#hdti-type {
+    font-size: 1.1rem;
+    color: #9E2A2B;
+    font-weight: bold;
+}
+
+.result-interpretation {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.result-interpretation h3 {
+    font-size: 1.3rem;
+    color: #1A1A1A;
+    margin-bottom: 20px;
+}
+
+.result-interpretation p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
+.emperor-avatar img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 2px solid #9E2A2B;
+}
+
+.result-share {
+    margin-top: 30px;
+}
+
+.share-icon {
+    display: flex;
+    align-items: center;
+}
+
+.share-text {
+    margin-top: 10px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 人格类型页面 */
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-container h1 {
+    font-size: 2rem;
+    color: #1A1A1A;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.personality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.personality-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.personality-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.emperor-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 4px 4px 0 0;
+}
+
+.personality-card h3 {
+    font-size: 1.2rem;
+    color: #9E2A2B;
+    margin-bottom: 5px;
+}
+
+.personality-card h4 {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.personality-card p {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* 测试说明页面 */
+.description-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.description-section h2 {
+    font-size: 1.4rem;
+    color: #9E2A2B;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.description-section ul,
+.description-section ol {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.description-section li {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* 动效类 */
+.slide-in-right {
+    animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.3s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-out-left {
+    animation: slideOutLeft 0.3s ease-out;
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+}
+
+.slide-out-right {
+    animation: slideOutRight 0.3s ease-out;
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+}
+
+.scroll-open {
+    animation: scrollOpen 0.5s ease-out;
+}
+
+@keyframes scrollOpen {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 印章效果 */
+.seal-effect {
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    animation: seal-press 0.5s ease-out forwards;
+}
+
+@keyframes seal-press {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* 保存提示 */
+.save-indicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: #9E2A2B;
+    color: #F5F0E6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 10000;
+    animation: save-pop 0.8s ease-out forwards;
+}
+
+@keyframes save-pop {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    30% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+/* 进度条印章 */
+.progress-stamp {
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    width: 20px;
+    height: 20px;
+    background-color: #9E2A2B;
+    color: #F5F0E6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    animation: stamp-bounce 0.5s ease-out;
+}
+
+@keyframes stamp-bounce {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 点击效果 */
+.clickable {
+    cursor: pointer;
+}
+
+/* 人格预览弹窗 */
+.personality-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.personality-modal.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: #F5F0E6;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background-color: #9E2A2B;
+    color: #F5F0E6;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    color: #9E2A2B;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.modal-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-type {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #9E2A2B;
+    color: #F5F0E6;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.modal-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
+/* 人格卡片添加点击效果 */
+.personality-card {
+    cursor: pointer;
+}
+    .navbar-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .welcome-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .question-content {
+        padding: 20px;
+    }
+
+    .option-btn {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    .result-core h2 {
+        font-size: 1.8rem;
+    }
+}
